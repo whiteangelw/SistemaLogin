@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sessão Segura | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <button id="theme-toggle" class="theme-btn" title="Alternar Tema">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="container">
+        <div id="view-login" class="card active">
+            <div class="header">
+                <i class="fas fa-user-shield logo"></i>
+                <h2>Acesse sua conta</h2>
+            </div>
+            <div class="input-group">
+                <input type="email" id="l-email" placeholder="E-mail">
+                <input type="password" id="l-senha" placeholder="Senha">
+            </div>
+            
+            <button id="btn-login" class="btn-primary" onclick="fluxoLogin()">
+                <span class="btn-text">Entrar</span>
+                <div class="loader"></div>
+            </button>
+
+            <div class="action-divider">OU</div>
+
+            <div class="footer-actions">
+                <button class="btn-link" onclick="mostrarTela('view-register')">
+                    <i class="fas fa-user-plus"></i> Criar Conta
+                </button>
+                <button class="btn-link" onclick="mostrarTela('view-forgot')">
+                    <i class="fas fa-key"></i> Esqueci a Senha
+                </button>
+            </div>
+        </div>
+
+        <div id="view-register" class="card">
+            <h2>Novo Cadastro</h2>
+            <div class="input-group">
+                <input type="text" id="r-nome" placeholder="Nome Completo">
+                <input type="email" id="r-email" placeholder="E-mail">
+                <input type="password" id="r-senha" placeholder="Senha Forte (A-z + 6 carac.)">
+            </div>
+            <button id="btn-register" class="btn-primary" onclick="fluxoRegistrar()">
+                <span class="btn-text">Finalizar Cadastro</span>
+                <div class="loader"></div>
+            </button>
+            <div class="footer-actions center">
+                <button class="btn-link" onclick="mostrarTela('view-login')">Voltar ao Login</button>
+            </div>
+        </div>
+
+        <div id="view-forgot" class="card">
+            <h2>Redefinir Senha</h2>
+            <div class="input-group">
+                <input type="email" id="f-email" placeholder="Confirme seu e-mail">
+                <input type="password" id="f-senha" placeholder="Nova Senha Forte">
+            </div>
+            <button id="btn-forgot" class="btn-primary" onclick="fluxoRecuperar()">
+                <span class="btn-text">Salvar Nova Senha</span>
+                <div class="loader"></div>
+            </button>
+            <div class="footer-actions center">
+                <button class="btn-link" onclick="mostrarTela('view-login')">Cancelar</button>
+            </div>
+        </div>
+
+        <div id="view-home" class="card">
+            <div class="header">
+                <i class="fas fa-check-circle success-icon"></i>
+                <h2 id="welcome-text"></h2>
+            </div>
+            <p>Sessão ativa com persistência de dados.</p>
+            <button class="btn-logout" onclick="logout()">Sair</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

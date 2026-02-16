@@ -1,0 +1,20 @@
+# Visual Studio (Arquivos locais e temporários)
+.vs/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.temp
+
+# Banco de Dados (Ignorar arquivos pesados e backups)
+*.mdf
+*.ldf
+*.bak
+
+# Frontend (Se for Node.js/React/Vue)
+node_modules/
+dist/
+.env
+
+# Outros
+.DS_Store
