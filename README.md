@@ -41,12 +41,13 @@ Sistema de autenticação robusto e moderno, focado em segurança e experiência
 
 ## 🏗️ Arquitetura do Sistema
 
-```mermaid```
+```mermaid
 graph LR
     A[Frontend JS] -- "Fetch/JSON" --> B[ASP.NET Web API]
     B -- "ADO.NET" --> C[SQL Server]
     C -- "Data" --> B
     B -- "JWT Token" --> A
+```
 
 📋 Como rodar o projeto
 1. Configuração do Banco de Dados
